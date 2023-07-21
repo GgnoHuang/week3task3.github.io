@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Coming+Soon&display=swap');
+
+*{
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Bacasime Antique', serif;
+}
+
+body{
+  background-image: linear-gradient(to right, #ddbee195, #ea8f2e62);
+  color: #212121;
+}
+.logo,
+.itemfont{
+  font-size: 20px;
+  text-decoration: none;
+}
+.itemfont{
+  margin-left: 15px;
+}
+
+.hamburger{
+  display: none;
+  cursor: pointer;
+}
+
+.section{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 80px;
+
+}
+
+header{
+  box-sizing: border-box;
+  padding: 0px 20px;
+  height: 65px;
+  width: 100%;
+  background-color:rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.welcome-container{
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height:250px;
+  width: 100%;
+  background-image: linear-gradient(to bottom, rgba(143, 212, 255, 0.8), rgba(26, 94, 137, 0.06));
+}
+.welcomeofont{
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-container{
+  border: 0px solid red;
+  margin-top: 50px;
+  width: 1200px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(6,1fr);
+  grid-template-rows: 50px;
+}
+.promotion-1{
+  display: flex;
+  grid-column-start:1 ;
+  grid-column-end: 3;
+}
+.promotion-2{
+  display: flex;
+  grid-column-start:3 ;
+  grid-column-end: 5;
+}
+.promotion-3{
+  display: flex;
+  grid-column-start:5 ;
+  grid-column-end: 7;
+}
+
+.promotion-1 img,
+.promotion-2 img,
+.promotion-3 img{
+  /* display: block; ??????*/
+  width: 80px;
+  object-fit: cover; /* 圖不變形 */
+}
+
+.title-container-top{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: auto;
+  flex-grow: 1;/* 填滿剩餘空間 */
+  background-image: linear-gradient(to right, rgb(255, 255, 255,0.8), rgba(255, 255, 255, 0.1));
+}
+.title-container-top p{
+  margin-left: 10px;
+}
+
+
+.card-container{
+  height:270px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.card-container img{
+  width: 100%;
+  height: 80%;
+  object-fit: cover; /* 圖不變形 */
+}
+
+.title-container{
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.1));
+  height: 20%;/* 搭配80% */
+  width: 100%;
+}
+
+
+
+@media(max-width:1200px){
+
+
+.grid-container{
+  margin-top: 50px;
+  width: 90%;
+  display: grid;
+  gap: 20px;
+  grid-template-columns:repeat(4,1fr) ;
+  grid-template-rows: 50px 50px auto;
+}
+.promotion-1{
+  display: flex;
+  grid-column-start:1 ;
+  grid-column-end: 3;
+  grid-row-start:1 ;
+  grid-row-end: 2;
+}
+.promotion-2{
+  display: flex;
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start:1 ;
+  grid-row-end: 2;
+}
+.promotion-3{
+  display: flex;
+  grid-column-start:1 ;
+  grid-column-end: 5;
+  grid-row-start:2 ;
+  grid-row-end: 3;
+}
+}
+
+
+@media(max-width:600px){
+
+  .navigation{
+    display: none;
+  }
+  .hamburger{
+    display: block;
+  }
+
+  .grid-container{
+    margin-top: 50px;
+    width: 90%;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: 50px 50px 50px auto;
+  }
+  .promotion-1{
+    grid-column-start:1 ;
+    grid-column-end: 2;
+    grid-row-start:1 ;
+    grid-row-end: 2;
+  }
+  
+  .promotion-2{
+    grid-column-start:1 ;
+    grid-column-end: 2;
+    grid-row-start:2 ;
+    grid-row-end: 3;
+  }
+
+  .promotion-3{
+    grid-column-start:1 ;
+    grid-column-end: 2;
+    grid-row-start:3 ;
+    grid-row-end: 4;
+  }
+}
+
+@media(max-width:500px){
+  .welcome-container{
+    font-size: 25px;
+  }
+}
